@@ -4,7 +4,7 @@
 # 
 
 %ifnarch %{ix86} alpha
-%define		_without_tests	1
+%undefine	with_tests
 %endif
 
 %include	/usr/lib/rpm/macros.perl
