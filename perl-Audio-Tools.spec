@@ -1,6 +1,11 @@
 #
 # Conditional build:
 # _without_tests - do not perform "make test"
+
+%ifnarch %{ix86} alpha
+%define		_without_tests	1
+%endif
+
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Audio
 %define		pnam	Tools
@@ -8,14 +13,12 @@ Summary:	Audio::Tools Perl module - common tools for some Audio:: modules
 Summary(pl):	Modu³ Perla Audio::Tools - wspólny kod dla czê¶ci modu³ów Audio::
 Name:		perl-Audio-Tools
 Version:	0.01
-Release:	1
+Release:	2
 License:	unknown
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 BuildRequires:	perl >= 5.6
 BuildRequires:	rpm-perlprov >= 3.0.3-16
-# ByteOrder expects little-endian machine
-ExclusiveArch:	%{ix86} alpha
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -60,6 +63,11 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %{perl_sitelib}/Audio/Tools.pm
 %{perl_sitelib}/Audio/Tools
+# ByteOrder expects a little-endian machine
+%ifarch %{ix86} alpha
 %dir %{perl_sitearch}/Audio/Tools
 %{perl_sitearch}/Audio/Tools/ByteOrder.pm
-%{_mandir}/man3/*
+%{_mandir}/man3/Audio::Tools::B*
+%endif
+%{_mandir}/man3/Audio::Tools::[FT]*
+%{_mandir}/man3/Audio::Tools.*
