@@ -1,6 +1,7 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+%bcond_without	tests	# do not perform "make test"
+# 
 
 %ifnarch %{ix86} alpha
 %define		_without_tests	1
@@ -46,7 +47,7 @@ pomiêdzy czasem, próbkami i bajtami.
 	INSTALLDIRS=vendor
 %{__make}
 
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
