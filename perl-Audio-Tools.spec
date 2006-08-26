@@ -14,7 +14,7 @@ Summary:	Audio::Tools Perl module - common tools for some Audio:: modules
 Summary(pl):	Modu³ Perla Audio::Tools - wspólny kod dla czê¶ci modu³ów Audio::
 Name:		perl-Audio-Tools
 Version:	0.01
-Release:	5
+Release:	6
 License:	unknown
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -57,21 +57,12 @@ install -d $RPM_BUILD_ROOT%{perl_vendorarch}/Audio/Tools
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-mv -f $RPM_BUILD_ROOT{%{perl_vendorlib},%{perl_vendorarch}}/Audio/Tools/ByteOrder.pm
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_vendorlib}/Audio/Tools.pm
+%{perl_vendorlib}/Audio/*.pm
 %{perl_vendorlib}/Audio/Tools
-# ByteOrder expects a little-endian machine
-%ifarch %{ix86} alpha
-%dir %{perl_vendorarch}/Audio/Tools
-%{perl_vendorarch}/Audio/Tools/ByteOrder.pm
-%{_mandir}/man3/Audio::Tools::B*
-%endif
-%{_mandir}/man3/Audio::Tools::[FT]*
-%{_mandir}/man3/Audio::Tools.*
+%{_mandir}/man3/*
