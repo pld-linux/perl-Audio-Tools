@@ -11,7 +11,7 @@
 %define		pdir	Audio
 %define		pnam	Tools
 Summary:	Audio::Tools Perl module - common tools for some Audio:: modules
-Summary(pl):	Modu³ Perla Audio::Tools - wspólny kod dla czê¶ci modu³ów Audio::
+Summary(pl.UTF-8):   ModuÅ‚ Perla Audio::Tools - wspÃ³lny kod dla czÄ™Å›ci moduÅ‚Ã³w Audio::
 Name:		perl-Audio-Tools
 Version:	0.01
 Release:	6
@@ -32,13 +32,13 @@ of porting to big endian machines. Fades is a collection of algorithms
 for fading in/ out audio files. Time is a collection of tools for
 conversion between time, samples & bytes among other things.
 
-%description -l pl
-W tym pakiecie znajduj± siê modu³y Audio::ByteOrder, Audio::Time oraz
-Audio::Fades. ByteOrder zawiera regu³y rozpakowywania dla maszyn
-little-endian i jest wydzielony w celu u³atwienia portowania na
-maszyny big-endian. Fades to zestaw algorytmów do wyciszania i
-nag³a¶niania plików d¼wiêkowych. Time to zestaw narzêdzi do konwersji
-pomiêdzy czasem, próbkami i bajtami.
+%description -l pl.UTF-8
+W tym pakiecie znajdujÄ… siÄ™ moduÅ‚y Audio::ByteOrder, Audio::Time oraz
+Audio::Fades. ByteOrder zawiera reguÅ‚y rozpakowywania dla maszyn
+little-endian i jest wydzielony w celu uÅ‚atwienia portowania na
+maszyny big-endian. Fades to zestaw algorytmÃ³w do wyciszania i
+nagÅ‚aÅ›niania plikÃ³w dÅºwiÄ™kowych. Time to zestaw narzÄ™dzi do konwersji
+pomiÄ™dzy czasem, prÃ³bkami i bajtami.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
