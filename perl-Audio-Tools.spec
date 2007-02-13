@@ -11,7 +11,7 @@
 %define		pdir	Audio
 %define		pnam	Tools
 Summary:	Audio::Tools Perl module - common tools for some Audio:: modules
-Summary(pl.UTF-8):   Moduł Perla Audio::Tools - wspólny kod dla części modułów Audio::
+Summary(pl.UTF-8):	Moduł Perla Audio::Tools - wspólny kod dla części modułów Audio::
 Name:		perl-Audio-Tools
 Version:	0.01
 Release:	6
