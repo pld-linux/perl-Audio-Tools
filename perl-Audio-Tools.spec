@@ -14,7 +14,7 @@ Summary:	Audio::Tools Perl module - common tools for some Audio:: modules
 Summary(pl.UTF-8):	Moduł Perla Audio::Tools - wspólny kod dla części modułów Audio::
 Name:		perl-Audio-Tools
 Version:	0.01
-Release:	6
+Release:	7
 License:	unknown
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
