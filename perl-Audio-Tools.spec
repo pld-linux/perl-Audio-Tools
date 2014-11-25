@@ -1,15 +1,14 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-# 
 
 %ifnarch %{ix86} alpha
 %undefine	with_tests
 %endif
 
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Audio
 %define		pnam	Tools
+%include	/usr/lib/rpm/macros.perl
 Summary:	Audio::Tools Perl module - common tools for some Audio:: modules
 Summary(pl.UTF-8):	Moduł Perla Audio::Tools - wspólny kod dla części modułów Audio::
 Name:		perl-Audio-Tools
@@ -19,6 +18,7 @@ License:	unknown
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	d608a733f373f7bd28d08c0ec6e67116
+URL:		http://search.cpan.org/dist/Audio-Tools/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
