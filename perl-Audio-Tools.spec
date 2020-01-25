@@ -8,7 +8,6 @@
 
 %define		pdir	Audio
 %define		pnam	Tools
-%include	/usr/lib/rpm/macros.perl
 Summary:	Audio::Tools Perl module - common tools for some Audio:: modules
 Summary(pl.UTF-8):	Moduł Perla Audio::Tools - wspólny kod dla części modułów Audio::
 Name:		perl-Audio-Tools
